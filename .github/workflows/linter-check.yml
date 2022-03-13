@@ -12,4 +12,4 @@ jobs:
     - name: install2
       run: make install
     - name: run-linter
-      run: make-lint
+      run: make lint
