@@ -9,10 +9,10 @@ runs-on: ubuntu-latest
 steps:
   - uses: actions/checkout@v2
   - name: setup-puthon
-  - uses: actions/setup-python@v2
+    uses: actions/setup-python@v2
   - name: install1
-  - run: pip install poetry
+    run: pip install poetry
   - name: install2
-  - run: make install
+    run: make install
   - name: run-linter
-  - run: make-lint
+    run: make-lint
