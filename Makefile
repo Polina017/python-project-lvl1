@@ -7,6 +7,10 @@ build:
 publish:
 	poetry publish --dry-run
 package-install:
-	pip install --user --force-reinstall dist/*.whl
+	python3 -m pip install --user dist/*.whl --force-reinstall
 lint:
 	poetry run flake8 brain_games
+brain-even:
+	poetry run brain-even
+brain-calc:
+	poetry run brain-calc
