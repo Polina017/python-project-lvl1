@@ -2,6 +2,7 @@
 import prompt
 from random import randint
 
+
 def welcome_user():
     global name
     name = prompt.string('May I have your name? ')
