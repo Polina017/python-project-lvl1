@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import prompt
-import brain_even
-from brain_even import welcome_user
+import brain_games.scripts.brain_even
+from brain_games.scripts.brain_even import welcome_user
 from random import randint, choice
 
 
@@ -31,18 +31,18 @@ def calc(): # noqa: 901
             print('Correct!')
         elif (int(answer) != a and o == a):
             print(answer + ' is wrong answer ;(. Correct answer was ' + str(a) + '.') # noqa: 501
-            print('Let`s try again, ' + brain_even.name + '!')
+            print('Let`s try again, ' + brain_games.scripts.brain_even.name + '!') # noqa: 501
             break
         elif (int(answer) != b and o == b):
             print(answer + ' is wrong answer ;(. Correct answer was ' + str(b) + '.') # noqa: 501
-            print('Let`s try again, ' + brain_even.name + '!')
+            print('Let`s try again, ' + brain_games.scripts.brain_even.name + '!') # noqa: 501
             break
         elif (int(answer) != c and o == c):
             print(answer + ' is wrong answer ;(. Correct answer was ' + str(c) + '.') # noqa: 501
-            print('Let`s try again, ' + brain_even.name + '!')
+            print('Let`s try again, ' + brain_games.scripts.brain_even.name + '!') # noqa: 501
             break
         if i == 3:
-            print('Congratulations, ' + brain_even.name + '!')
+            print('Congratulations, ' + brain_games.scripts.brain_even.name + '!') # noqa: 501
         i = i + 1
 
 
