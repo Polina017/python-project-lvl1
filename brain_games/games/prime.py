@@ -7,19 +7,20 @@ def welcome():
 
 
 def game_logic():
-    num = random.randint(1, 100)
-    if num % 2 == 0 and num == 2:
-        answer = "yes"
-    elif num % 2 == 0 and num != 2:
-        answer = "no"
-    count = 0
-    for count in range(3, round(math.sqrt(num))):
-        if num % count == 0:
-            count += 1
-    if count <= 0:
-        answer = "yes"
-    else:
-        answer = "no"
+    num = random.randint(1, 101)
     question = ("Question: {}".format(num))
+    x = 2
+    while x <= num:
+        if num == 1 or num == 2:
+            answer = "yes"
+            break
+        elif x == num:
+            answer = "yes"
+            break
+        elif num % x != 0:
+            x += 1
+        else:
+            answer = "no"
+            break
     result = (question, answer)
     return result

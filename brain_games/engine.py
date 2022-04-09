@@ -21,10 +21,11 @@ def start(module):
         user_answer = prompt.string("Your answer: ")
         if user_answer == right_answer:
             print("Correct!")
+            count += 1
         else:
             print("'{}' {} '{}'.".format(user_answer, incorrect, right_answer)) # noqa: 501
             print("Let's try again, {}!".format(name))
             break
-        count += 1
     # If user passed 3 levels, he won
+    else:
         print("Congratulations, {}!".format(name))
