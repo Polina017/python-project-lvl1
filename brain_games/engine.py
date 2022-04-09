@@ -22,7 +22,7 @@ def start(module):
         if user_answer == right_answer:
             print("Correct!")
         else:
-            print("'{}' {} '{}'.".format(user_answer, incorrect, right_answer))
+            print("Your answer: '{}' {} '{}'.".format(user_answer, incorrect, right_answer))
             print("Let`s try again, {}!".format(name))
             break
         count += 1
