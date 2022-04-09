@@ -1,24 +1,30 @@
 import prompt
 
 
-def run_game(game):
-    #welcoming and asking name
+number_levels = 3
+incorrect = "is wrong answer ;(. Correct answer was"
+
+
+def start(module):
+    # Greet and asking name of user
     print("Welcome to the Brain Games!")
-    name = prompt.string("May I have your name? ")
-    print("Hello, " + name + "!")
-    #counditions of a game
-    print(game.common_phrase)
-    rounds = 3
-    counter = 0
-    while counter < rounds:
-        question, result =                    
-        print(question)
-        answer = prompt.string("Your answer: ")
-        if answer == result:
+    name = prompt.string("May I have your name: ")
+    print("Hello, {}!".format(name))
+    module.welcome()
+    # 3 levels of the game
+    count = 1
+    while count <= number_levels:
+        basic_elements = module.game_logic()
+        # result = (question, answer) -> basic_elements = (question, answer)
+        (game_question, right_answer) = basic_elements
+        print(game_question)
+        user_answer = prompt.string("Your answer: ")
+        if user_answer == right_answer:
             print("Correct!")
-            counter = counter + 1
         else:
-            print(answer + " is wrong answer ;(. Correct answer was " + result + ".")
-            print("Let`s try again, " + name + "!")
+            print("'{}' {} '{}'.".format(user_answer, incorrect, right_answer))
+            print("Let`s try again, {}!".format(name))
             break
-    print("Congratulations, " + name + "!")
+        count += 1
+    # If user passed 3 levels, he won
+        print("Congratulations, {}!".format(name))
