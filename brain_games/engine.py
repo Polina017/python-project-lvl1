@@ -27,5 +27,5 @@ def start(module):
             print("Let's try again, {}!".format(name))
             break
     # If user passed 3 levels, he won
-        if count == 3:
-            print("Congratulations, {}!".format(name))
+    if count == 3:
+        print("Congratulations, {}!".format(name))
