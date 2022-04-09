@@ -22,8 +22,8 @@ def start(module):
         if user_answer == right_answer:
             print("Correct!")
         else:
-            print("Your answer: '{}' {} '{}'.".format(user_answer, incorrect, right_answer))
-            print("Let`s try again, {}!".format(name))
+            print("Your answer: '{}' {} '{}'.".format(user_answer, incorrect, right_answer)) # noqa: 501
+            print("Let's try again, {}!".format(name))
             break
         count += 1
     # If user passed 3 levels, he won
