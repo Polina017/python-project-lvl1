@@ -12,8 +12,8 @@ def start(module):
     print("Hello, {}!".format(name))
     module.welcome()
     # 3 levels of the game
-    count = 1
-    while count <= number_levels:
+    count = 0
+    while count < number_levels:
         basic_elements = module.game_logic()
         # result = (question, answer) -> basic_elements = (question, answer)
         (game_question, right_answer) = basic_elements
@@ -27,5 +27,5 @@ def start(module):
             print("Let's try again, {}!".format(name))
             break
     # If user passed 3 levels, he won
-    else:
-        print("Congratulations, {}!".format(name))
+        if count == 3:
+            print("Congratulations, {}!".format(name))
