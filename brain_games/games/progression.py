@@ -14,5 +14,5 @@ def generate_question_answer():
     symbol = progression[secret_index]
     progression[secret_index] = ".."
     answer = symbol
-    question = ("Question: {}".format(progression))
+    question = ("Question: " + " ".join(progression))
     return question, answer
