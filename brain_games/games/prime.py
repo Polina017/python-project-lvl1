@@ -1,25 +1,27 @@
 import random
 
 
-def welcome():
-    print('Answer "yes" if given number is prime. Otherwise answer "no".')
+GAME_RULES = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
-def game_logic():
-    num = random.randint(1, 101)
-    question = ("Question: {}".format(num))
+def generate_question_answer():
+    number = random.randint(1, 101)
+    question = ("Question: {}".format(number))
+    if is_prime(number):
+        answer = "yes"
+    else:
+        answer = "no"
+    return question, answer
+
+
+def is_prime(number):
     x = 2
-    while x <= num:
-        if num == 1 or num == 2:
-            answer = "yes"
-            break
-        elif x == num:
-            answer = "yes"
-            break
-        elif num % x != 0:
+    while x <= number:
+        if number == 1 or number == 2:
+            return True
+        elif x == number:
+            return True
+        elif number % x != 0:
             x += 1
         else:
-            answer = "no"
-            break
-    result = (question, answer)
-    return result
+            return False

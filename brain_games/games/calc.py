@@ -1,21 +1,19 @@
 from random import randint, choice
 
 
-def welcome():
-    print('What is the result of the expression?')
+GAME_RULES = 'What is the result of the expression?'
 
 
-def game_logic():
-    n1 = randint(10, 20)
-    n2 = randint(1, 10)
-    o = choice("+-*")
-    question = ("Question: {} {} {}".format(n1, o, n2))
-    if o == "+":
-        answer = n1 + n2
-    elif o == "-":
-        answer = n1 - n2
-    elif o == "*":
-        answer = n1 * n2
+def generate_question_answer():
+    number_1 = randint(10, 20)
+    number_2 = randint(1, 10)
+    operator = choice("+-*")
+    question = ("Question: {} {} {}".format(number_1, operator, number_2))
+    if operator == "+":
+        answer = number_1 + number_2
+    elif operator == "-":
+        answer = number_1 - number_2
+    elif operator == "*":
+        answer = number_1 * number_2
     answer = str(answer)
-    result = (question, answer)
-    return result
+    return question, answer
