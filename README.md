@@ -14,6 +14,7 @@
 +  Each game has 3 rounds.
 +  You will win if you give 3 correct answers.
 +  Otherwise you will see a message about wrong answer and it means you lose and game is over.
+## Examples of games
 [![asciicast](https://asciinema.org/a/e5qrbRCSuV6PZFhXmLqCpKn5t.svg)](https://asciinema.org/a/e5qrbRCSuV6PZFhXmLqCpKn5t)
 [![asciicast](https://asciinema.org/a/a3QvILSXzgwFCGltZPcakIHMG.svg)](https://asciinema.org/a/a3QvILSXzgwFCGltZPcakIHMG)
 [![asciicast](https://asciinema.org/a/RBAnSppAuyLw9yZXbG0XcbLJe.svg)](https://asciinema.org/a/RBAnSppAuyLw9yZXbG0XcbLJe)
